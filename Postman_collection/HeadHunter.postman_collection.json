@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "1fe55d55-67b3-4fdb-b8f2-aa6807c8242b",
+		"name": "HeadHunter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18753458"
+	},
+	"item": [
+		{
+			"name": "Запрос за информацией по ключевым навыкам",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/suggests/skill_set?text=Тестирование пользовательского интерфейса",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"suggests",
+						"skill_set"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "Тестирование пользовательского интерфейса"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Станции метро в Нижнем Новгороде",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/metro/66",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"metro",
+						"66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение информации по университету",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/educational_institutions?id=39108",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"educational_institutions"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "39108"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Доступные языки",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "PHPSESSID=r2t5uvjq435r4q7ib3vtdjq120",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/languages",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"languages"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://api.hh.ru",
+			"type": "string"
+		}
+	]
+}
